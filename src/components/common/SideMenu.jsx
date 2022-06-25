@@ -8,6 +8,8 @@ const SideMenu = () => {
   const [activate3, setActivate3] = useState();
   const [activate4, setActivate4] = useState();
   const [activate5, setActivate5] = useState();
+  const [activateSnippets, setActivateSnippets] = useState();
+  const [activateAnimate, setActivateAnimate] = useState();
   const router = useRouter();
   useEffect(() => {
     if (router.pathname === "/layout/pagelayout") {
@@ -20,13 +22,17 @@ const SideMenu = () => {
       setActivate4("tab-active");
     } else if (router.pathname === "/components/buttons") {
       setActivate5("tab-active");
+    } else if (router.pathname === "/vscode/snippets") {
+      setActivateSnippets("tab-active");
+    } else if (router.pathname === "/animation/animate") {
+      setActivateAnimate("tab-active");
     }
   }, []);
   return (
     <>
       <div className="container">
         <Link href="/">
-          <p className={`logo`}>⎈</p>
+          <p className={`logo`}>㉿</p>
         </Link>
         <input className="input" placeholder="Search" />
         <h4 className="section-header">Layout</h4>
@@ -49,7 +55,13 @@ const SideMenu = () => {
         <p className="section-tab">Header</p>
         <p className="section-tab">Footer</p>
         <h4 className="section-header">Animations</h4>
-        <p className="section-tab">CSS-Animate</p>
+        <Link href="/animation/animate">
+          <p className={`section-tab ${activateAnimate}`}>CSS-Animate</p>
+        </Link>
+        <h4 className="section-header">VS-Code</h4>
+        <Link href="/vscode/snippets">
+          <p className={`section-tab ${activateSnippets}`}>Snippets</p>
+        </Link>
       </div>
       <style jsx>
         {`
@@ -69,7 +81,7 @@ const SideMenu = () => {
             font-weight: 100;
           }
           .logo {
-            color: orange;
+            color: #58ccd6;
             font-size: 3rem;
             margin-bottom: 2rem;
           }

@@ -6,7 +6,7 @@ const HiddenMain = () => {
     <>
       <div className="content-container">
         <h1 className="header">Hidden</h1>
-        <p>
+        <p className="text">
           Responsively hides children based on the screensize. react-responsive
           needs to be installed.
         </p>

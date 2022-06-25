@@ -7,7 +7,7 @@ const ButtonsTableComponent = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>Property</th>
+              <th>Attribute</th>
               <th>Name</th>
               <th>Description</th>
             </tr>

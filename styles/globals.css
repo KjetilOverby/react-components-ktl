@@ -27,6 +27,21 @@ h6 {
   grid-area: content;
   padding: 3rem;
 }
+.code-box {
+  background: #333;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 45rem;
+  height: auto;
+  overflow: scroll;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+.text {
+  font-weight: 300;
+}
 * {
   box-sizing: border-box;
 }

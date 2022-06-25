@@ -7,11 +7,8 @@ const PageLayoutMain = () => {
         <div className="text-container">
           <h1 className="header">2 Columns layout</h1>
           <p className="text">
-            Pagelayout is very useful when a header and footer is used with
-            content in the center. the pagelayout component is using css grid
-            areas and children components needs grid-area property. Only three
-            children components can be set inside and its grid-area header,
-            content and footer. For instance:
+            2 columns layout is a responsive component who change to one column
+            when the screen get to mobile size.
           </p>
         </div>
         <div className="html-box">
