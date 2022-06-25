@@ -1,6 +1,7 @@
 import Head from "next/head";
 import PageLayoutDashboard from "../src/components/common/PageLayoutDashboard";
 import SideMenu from "../src/components/common/SideMenu";
+import StartpageMain from "../src/components/startpage/StartpageMain";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <PageLayoutDashboard>
         <SideMenu />
+        <StartpageMain />
       </PageLayoutDashboard>
     </div>
   );

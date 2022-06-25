@@ -7,9 +7,9 @@ const TableComponent = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>Attribute</th>
-              <th>Name</th>
-              <th>Description</th>
+              <th className="table-header">Attribute</th>
+              <th className="table-header">Name</th>
+              <th className="table-header">Description</th>
             </tr>
           </thead>
           <tbody>
@@ -58,10 +58,17 @@ const TableComponent = () => {
             width: 100%;
             border: 1px solid #cacaca;
           }
+          .table-header {
+            font-weight: 300;
+            padding: 1rem;
+          }
           td {
             padding: 1rem;
           }
           tr:nth-child(2n) {
+            background: #e9e9e9;
+          }
+          thead {
             background: #e9e9e9;
           }
         `}
