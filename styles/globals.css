@@ -26,6 +26,9 @@ h6 {
 .content-container {
   grid-area: content;
   padding: 3rem;
+  max-height: 100vh;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .code-box {
