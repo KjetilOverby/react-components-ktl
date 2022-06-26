@@ -139,7 +139,6 @@ export default MarginLayout;
             display: grid;
             grid-template-rows: 4rem 1fr 4rem;
             border: 1px solid lightgray;
-            grid-area: second;
           }
           .illustration-text {
           }
@@ -168,7 +167,6 @@ export default MarginLayout;
             height: auto;
             overflow: scroll;
             border-radius: 5px;
-            grid-area: code;
             margin-top: 5rem;
           }
           .code-text {
@@ -183,7 +181,13 @@ export default MarginLayout;
           .span-tag {
             color: blue;
           }
-          @media screen and (max-width: 2100px) {
+          @media screen and (max-width: 650px) {
+            .code-box {
+              width: 100%;
+            }
+            .container {
+              padding: 0.5rem;
+            }
           }
         `}
       </style>

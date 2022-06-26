@@ -74,7 +74,11 @@ export default PageLayout;`}</p>
           .container {
             grid-area: content;
             padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
           }
+
           .header {
             font-weight: 300;
             margin-bottom: 3rem;
@@ -93,9 +97,7 @@ export default PageLayout;`}</p>
             margin: 5rem 0;
             text-align: center;
           }
-          .first-box {
-            grid-area: first;
-          }
+
           .first-tag {
             color: dodgerblue;
           }
@@ -114,7 +116,6 @@ export default PageLayout;`}</p>
             display: grid;
             grid-template-rows: 4rem 1fr 4rem;
             border: 1px solid lightgray;
-            grid-area: second;
           }
           .illustration-text {
           }
@@ -143,7 +144,6 @@ export default PageLayout;`}</p>
             height: auto;
             overflow: scroll;
             border-radius: 5px;
-            grid-area: code;
             margin-top: 5rem;
           }
           .code-text {
@@ -158,7 +158,13 @@ export default PageLayout;`}</p>
           .span-tag {
             color: blue;
           }
-          @media screen and (max-width: 2100px) {
+          @media screen and (max-width: 650px) {
+            .code-box {
+              width: 100%;
+            }
+            .container {
+              padding: 0.5rem;
+            }
           }
         `}
       </style>

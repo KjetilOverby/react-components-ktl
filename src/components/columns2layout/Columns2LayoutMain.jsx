@@ -162,7 +162,6 @@ export default Column2Layout;`}</p>
             height: auto;
             overflow: scroll;
             border-radius: 5px;
-            grid-area: code;
             margin-top: 5rem;
           }
           .code-text {
@@ -177,7 +176,13 @@ export default Column2Layout;`}</p>
           .span-tag {
             color: blue;
           }
-          @media screen and (max-width: 2100px) {
+          @media screen and (max-width: 650px) {
+            .code-box {
+              width: 100%;
+            }
+            .container {
+              padding: 0.5rem;
+            }
           }
         `}
       </style>

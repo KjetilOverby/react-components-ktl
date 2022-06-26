@@ -130,6 +130,7 @@ const SideMenu = () => {
             font-size: 1.2rem;
             width: 12rem;
             font-weight: 100;
+            color: #dadada;
           }
           .logo {
             color: #58ccd6;
@@ -154,6 +155,7 @@ const SideMenu = () => {
           .section-header {
             color: grey;
             margin: 1rem 0;
+            font-weight: bold;
           }
           .section-tab {
             color: white;

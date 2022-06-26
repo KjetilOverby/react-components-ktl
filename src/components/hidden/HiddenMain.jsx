@@ -109,6 +109,11 @@ export default Hidden;
             color: dodgerblue;
             margin-left: 2rem;
           }
+          @media screen and (max-width: 650px) {
+            .code-box {
+              width: 100%;
+            }
+          }
         `}
       </style>
     </>

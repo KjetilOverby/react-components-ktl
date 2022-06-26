@@ -123,6 +123,11 @@ const ButtonsMain = () => {
           font-weight: 300;
           margin-bottom: 0.5rem;
         }
+        @media screen and (max-width: 650px) {
+          .code-box {
+            width: 100%;
+          }
+        }
       `}</style>
     </>
   );

@@ -49,6 +49,11 @@ const SnippetsMain = () => {
           font-weight: 300;
           margin-top: 5rem;
         }
+        @media screen and (max-width: 650px) {
+          .code-box {
+            width: 100%;
+          }
+        }
       `}</style>
     </>
   );
