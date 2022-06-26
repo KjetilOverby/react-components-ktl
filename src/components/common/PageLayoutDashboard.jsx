@@ -13,6 +13,11 @@ const PageLayoutDashboard = ({ children }) => {
             grid-template-areas: "sideMenu content";
             min-height: 100vh;
           }
+          @media (max-width: 1000px) {
+            .container {
+              grid-template-areas: "content content";
+            }
+          }
         `}
       </style>
     </>

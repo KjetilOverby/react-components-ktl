@@ -393,8 +393,7 @@ const AnimateMain = () => {
             grid-template-columns: 1fr 15rem;
             grid-template-areas: "middle right";
             height: 100vh;
-
-            background-size: cover;
+            grid-area: content;
           }
           .code-box {
             background: #333;
