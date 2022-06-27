@@ -13,6 +13,7 @@ const SideMenu = () => {
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
+  const [activateFooter, setActivateFooter] = useState();
   const router = useRouter();
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -53,6 +54,8 @@ const SideMenu = () => {
       setActivateAnimate("tab-active");
     } else if (router.pathname === "/components/header") {
       setActivateHeader("tab-active");
+    } else if (router.pathname === "/components/footer") {
+      setActivateFooter("tab-active");
     }
   }, []);
   return (
@@ -93,7 +96,9 @@ const SideMenu = () => {
         <Link href="/components/header">
           <p className={`section-tab ${activateHeader}`}>Header</p>
         </Link>
-        <p className="section-tab">Footer</p>
+        <Link href="/components/footer">
+          <p className={`section-tab ${activateFooter}`}>Footer</p>
+        </Link>
         <h4 className="section-header">Animations</h4>
         <Link href="/animation/animate">
           <p className={`section-tab ${activateAnimate}`}>CSS-Animate</p>
