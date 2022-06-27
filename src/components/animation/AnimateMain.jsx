@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import animateList from "../animation/animateList";
+import CodeBox from "../common/CodeBox";
 
 const AnimateMain = () => {
   const [name, setName] = useState();
@@ -380,7 +381,8 @@ const AnimateMain = () => {
             {permanentName && (
               <>
                 <h1 className="permanent">{permanentName}</h1>
-                <div className="code-box">{code}</div>
+                {/* <div className="code-box">{code}</div> */}
+                <CodeBox code={code} />
               </>
             )}
           </div>

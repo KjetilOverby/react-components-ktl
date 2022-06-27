@@ -1,4 +1,5 @@
 import React from "react";
+import CodeBox from "../common/CodeBox";
 import TableComponent from "./TableComponent";
 
 const HiddenMain = () => {
@@ -25,8 +26,8 @@ const HiddenMain = () => {
         </div>
         <h2 className="props-header">Props</h2>
         <TableComponent />
-        <div className="code-box">
-          <p style={{ color: "white" }}>{`
+        <CodeBox
+          code={`
 import React, { useEffect, useState } from \"react\";
 import { useMediaQuery } from "react-responsive";
 
@@ -71,8 +72,8 @@ const Hidden = ({ children, size }) => {
 
 export default Hidden;
 
-`}</p>
-        </div>
+`}
+        />
       </div>
       <style jsx>
         {`

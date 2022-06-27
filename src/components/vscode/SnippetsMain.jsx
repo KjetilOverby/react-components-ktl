@@ -1,4 +1,5 @@
 import React from "react";
+import CodeBox from "../common/CodeBox";
 
 const SnippetsMain = () => {
   return (
@@ -9,7 +10,8 @@ const SnippetsMain = () => {
         <p>{`Go to: Code -\> Preferences -\> User Snippets`}</p>
         <p>Choose programmingformat, for instance JSON</p>
         <h2 className="snippet-header">Next JS snippets</h2>
-        <div className="code-box">{`
+        <CodeBox
+          code={`
           
           {
             \"Print to console\": {
@@ -42,7 +44,8 @@ const SnippetsMain = () => {
               \"description": \"Next js\"
             }
           }
-        `}</div>
+        `}
+        />
       </div>
       <style jsx>{`
         .snippet-header {

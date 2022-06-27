@@ -1,4 +1,5 @@
 import React from "react";
+import CodeBox from "../common/CodeBox";
 
 const PageLayoutMain = () => {
   return (
@@ -41,8 +42,8 @@ const PageLayoutMain = () => {
             <p className="illustration-text">Footer</p>
           </div>
         </div>
-        <div className="code-box">
-          <p style={{ color: "white" }}>{`import React from \"react\";
+        <CodeBox
+          code='import React from \"react\";
 
 const PageLayout = ({ children }) => {
   return (
@@ -66,8 +67,8 @@ const PageLayout = ({ children }) => {
   );
 };
 
-export default PageLayout;`}</p>
-        </div>
+export default PageLayout;'
+        />
       </div>
       <style jsx>
         {`

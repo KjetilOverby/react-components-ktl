@@ -1,4 +1,5 @@
 import React from "react";
+import CodeBox from "../common/CodeBox";
 
 const MarginLayoutMain = () => {
   return (
@@ -52,8 +53,8 @@ const MarginLayoutMain = () => {
             <p className="illustration-text">Footer</p>
           </div>
         </div>
-        <div className="code-box">
-          <p style={{ color: "white" }}>{`import React from \'react\';
+        <CodeBox
+          code={`import React from \'react\';
 
 const MarginLayout = ({ children }) => {
   return (
@@ -91,8 +92,8 @@ const MarginLayout = ({ children }) => {
         \`}</style></>);};
 
 export default MarginLayout;
-`}</p>
-        </div>
+`}
+        />
       </div>
       <style jsx>
         {`

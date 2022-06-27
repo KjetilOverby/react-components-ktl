@@ -12,6 +12,7 @@ const SideMenu = () => {
   const [activate5, setActivate5] = useState();
   const [activateSnippets, setActivateSnippets] = useState();
   const [activateAnimate, setActivateAnimate] = useState();
+  const [activateHeader, setActivateHeader] = useState();
   const router = useRouter();
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -50,6 +51,8 @@ const SideMenu = () => {
       setActivateSnippets("tab-active");
     } else if (router.pathname === "/animation/animate") {
       setActivateAnimate("tab-active");
+    } else if (router.pathname === "/components/header") {
+      setActivateHeader("tab-active");
     }
   }, []);
   return (
@@ -87,7 +90,9 @@ const SideMenu = () => {
         <Link href="/components/buttons">
           <p className={`section-tab ${activate5}`}>Buttons</p>
         </Link>
-        <p className="section-tab">Header</p>
+        <Link href="/components/header">
+          <p className={`section-tab ${activateHeader}`}>Header</p>
+        </Link>
         <p className="section-tab">Footer</p>
         <h4 className="section-header">Animations</h4>
         <Link href="/animation/animate">
@@ -105,6 +110,7 @@ const SideMenu = () => {
             background: #333;
             padding: 1rem;
             transform: ${isMobile && "translateX(-15rem)"};
+            z-index: 1500;
           }
           .container-open {
             animation: openContainer 0.8s forwards;
@@ -147,7 +153,7 @@ const SideMenu = () => {
             background: orange;
             width: 3rem;
             height: 3rem;
-            z-index: 1000;
+            z-index: 1500;
             border-radius: 50%;
             display: grid;
             place-items: center;
