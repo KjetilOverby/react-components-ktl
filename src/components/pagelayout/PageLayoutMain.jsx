@@ -43,7 +43,7 @@ const PageLayoutMain = () => {
           </div>
         </div>
         <CodeBox
-          code='import React from \"react\";
+          code={`import React from \"react\";
 
 const PageLayout = ({ children }) => {
   return (
@@ -67,7 +67,7 @@ const PageLayout = ({ children }) => {
   );
 };
 
-export default PageLayout;'
+export default PageLayout;`}
         />
       </div>
       <style jsx>
