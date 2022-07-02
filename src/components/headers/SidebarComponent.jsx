@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { IoMenuSharp } from "react-icons/io5";
 
-const SideMenu = () => {
+const SidebarComponent = () => {
   const [activate, setActivate] = useState();
   const [activate2, setActivate2] = useState();
   const [activate3, setActivate3] = useState();
@@ -14,8 +14,6 @@ const SideMenu = () => {
   const [activateAnimate, setActivateAnimate] = useState();
   const [activateHeader, setActivateHeader] = useState();
   const [activateFooter, setActivateFooter] = useState();
-  const [activateSidebar, setActivateSidebar] = useState();
-  const [activatePagelayoutSidebar, setActivatePagelayoutSidebar] = useState();
   const router = useRouter();
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -40,28 +38,24 @@ const SideMenu = () => {
   }, [isMobile]);
 
   useEffect(() => {
-    if (router.pathname === "/layout/pagelayout") {
+    if (router.pathname === "/#") {
       setActivate("tab-active");
-    } else if (router.pathname === "/layout/marginlayout") {
+    } else if (router.pathname === "/about") {
       setActivate2("tab-active");
-    } else if (router.pathname === "/layout/columns2layout") {
+    } else if (router.pathname === "/#") {
       setActivate3("tab-active");
-    } else if (router.pathname === "/layout/hidden") {
+    } else if (router.pathname === "/#") {
       setActivate4("tab-active");
-    } else if (router.pathname === "/components/buttons") {
+    } else if (router.pathname === "/#") {
       setActivate5("tab-active");
-    } else if (router.pathname === "/vscode/snippets") {
+    } else if (router.pathname === "/#") {
       setActivateSnippets("tab-active");
-    } else if (router.pathname === "/animation/animate") {
+    } else if (router.pathname === "/#") {
       setActivateAnimate("tab-active");
-    } else if (router.pathname === "/components/header") {
+    } else if (router.pathname === "/#") {
       setActivateHeader("tab-active");
-    } else if (router.pathname === "/components/footer") {
+    } else if (router.pathname === "/#") {
       setActivateFooter("tab-active");
-    } else if (router.pathname === "/components/sidebar") {
-      setActivateSidebar("tab-active");
-    } else if (router.pathname === "/components/pagelayoutsidebar") {
-      setActivateSidebar("tab-active");
     }
   }, []);
   return (
@@ -79,51 +73,45 @@ const SideMenu = () => {
       )}
       <div className={`container ${container}`}>
         <Link href="/">
-          <p className={`logo`}>㉿</p>
+          <p className={`logo`}>☯︎</p>
         </Link>
         <input className="input" placeholder="Search" />
-        <h4 className="section-header">Layout</h4>
-        <Link href="/layout/pagelayout">
-          <p className={`section-tab ${activate}`}>Pagelayout</p>
+        <h4 className="section-header">Header</h4>
+        <Link href="/about">
+          <p className={`section-tab ${activate}`}>About</p>
         </Link>
-        <Link href="/layout/pagelayoutsidebar">
-          <p className={`section-tab ${activate}`}>Pagelayout sidebar</p>
-        </Link>
-        <Link href="/layout/marginlayout">
-          <p className={`section-tab ${activate2}`}>Marginlayout</p>
+        <Link href="/">
+          <p className={`section-tab ${activate2}`}>Work</p>
         </Link>
         <Link href="/layout/columns2layout">
-          <p className={`section-tab ${activate3}`}>2 columns-layout</p>
+          <p className={`section-tab ${activate3}`}>News</p>
         </Link>
-        <Link href="/layout/hidden">
-          <p className={`section-tab ${activate4}`}>Hidden</p>
+        <Link href="/">
+          <p className={`section-tab ${activate4}`}>Testing</p>
         </Link>
-        <h4 className="section-header">Components</h4>
-        <Link href="/components/buttons">
-          <p className={`section-tab ${activate5}`}>Buttons</p>
+        <h4 className="section-header">Build</h4>
+        <Link href="/">
+          <p className={`section-tab ${activate5}`}>House</p>
         </Link>
-        <Link href="/components/header">
-          <p className={`section-tab ${activateHeader}`}>Header</p>
+        <Link href="/">
+          <p className={`section-tab ${activateHeader}`}>Mall</p>
         </Link>
-        <Link href="/components/sidebar">
-          <p className={`section-tab ${activateSidebar}`}>Sidebar</p>
+        <Link href="/">
+          <p className={`section-tab ${activateFooter}`}>Apartment</p>
         </Link>
-        <Link href="/components/footer">
-          <p className={`section-tab ${activateFooter}`}>Footer</p>
+        <h4 className="section-header">Color</h4>
+        <Link href="/">
+          <p className={`section-tab ${activateAnimate}`}>Green</p>
         </Link>
-        <h4 className="section-header">Animations</h4>
-        <Link href="/animation/animate">
-          <p className={`section-tab ${activateAnimate}`}>CSS-Animate</p>
-        </Link>
-        <h4 className="section-header">VS-Code</h4>
-        <Link href="/vscode/snippets">
-          <p className={`section-tab ${activateSnippets}`}>Snippets</p>
+        <h4 className="section-header">Support</h4>
+        <Link href="">
+          <p className={`section-tab ${activateSnippets}`}>Helpdesk</p>
         </Link>
       </div>
       <style jsx>
         {`
           .container {
-            grid-area: sideMenu;
+            grid-area: sideBar;
             background: #333;
             padding: 1rem;
             transform: ${isMobile && "translateX(-15rem)"};
@@ -132,7 +120,7 @@ const SideMenu = () => {
           .container-open {
             animation: openContainer 0.8s forwards;
             position: absolute;
-            min-height: 100vh;
+            min-height: 70vh;
           }
           .container-close {
             animation: close 0.8s forwards;
@@ -167,7 +155,7 @@ const SideMenu = () => {
             position: fixed;
             right: 2rem;
             top: 2rem;
-            background: orange;
+            background: #58ccd6;
             width: 3rem;
             height: 3rem;
             z-index: 1500;
@@ -190,8 +178,20 @@ const SideMenu = () => {
           .section-tab:hover {
             cursor: pointer;
           }
+
           .tab-active::before {
-            content: "😝 ";
+            content: "🁢 ";
+            position: absolute;
+            left: 0;
+            background: #58ccd6;
+            color: #58ccd6;
+          }
+
+           {
+            /* .tab-active {
+            background: #58ccd6;
+            width: 90%;e
+          } */
           }
           @keyframes openContainer {
             50% {
@@ -215,4 +215,4 @@ const SideMenu = () => {
   );
 };
 
-export default SideMenu;
+export default SidebarComponent;
