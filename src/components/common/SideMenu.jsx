@@ -60,8 +60,8 @@ const SideMenu = () => {
       setActivateFooter("tab-active");
     } else if (router.pathname === "/components/sidebar") {
       setActivateSidebar("tab-active");
-    } else if (router.pathname === "/components/pagelayoutsidebar") {
-      setActivateSidebar("tab-active");
+    } else if (router.pathname === "/layout/pagelayoutsidebar") {
+      setActivatePagelayoutSidebar("tab-active");
     }
   }, []);
   return (
@@ -87,7 +87,9 @@ const SideMenu = () => {
           <p className={`section-tab ${activate}`}>Pagelayout</p>
         </Link>
         <Link href="/layout/pagelayoutsidebar">
-          <p className={`section-tab ${activate}`}>Pagelayout sidebar</p>
+          <p className={`section-tab ${activatePagelayoutSidebar}`}>
+            Pagelayout sidebar
+          </p>
         </Link>
         <Link href="/layout/marginlayout">
           <p className={`section-tab ${activate2}`}>Marginlayout</p>
