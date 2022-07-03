@@ -18,8 +18,8 @@ const CssMain = () => {
           <CssClassComponent nameClass="p" styles={padding} />
           <CssClassComponent nameClass="mb" styles={marginBottom} />
           <CssClassComponent nameClass="mt" styles={marginTop} />
-          <CssClassComponent nameClass="pb" styles={paddingTop} />
-          <CssClassComponent nameClass="pt" styles={paddingBottom} />
+          <CssClassComponent nameClass="pb" styles={paddingBottom} />
+          <CssClassComponent nameClass="pt" styles={paddingTop} />
           <CssClassComponent
             nameClass="p,
   h1,

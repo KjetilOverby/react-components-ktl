@@ -4,11 +4,11 @@ const CssClassComponent = ({ nameClass, styles }) => {
   return (
     <>
       <div className="container">
-        <p className="className">{`.${nameClass} {`}</p>
+        <p className="className">{`.${nameClass} \{`}</p>
         {styles.map((style) => (
-          <p>{style}</p>
+          <p key={style}>{style}</p>
         ))}
-        <p className="closure">{`}`}</p>
+        <p className="closure">{`\}`}</p>
       </div>
       <style jsx>
         {`

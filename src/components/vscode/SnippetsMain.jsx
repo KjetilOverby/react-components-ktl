@@ -16,9 +16,7 @@ const SnippetsMain = () => {
         <div className="install-box">
           <p>{`\${TM_FILENAME_BASE/[\\\\.]//}`}</p>
         </div>
-        <h2 className="text" className="snippet-header">
-          Next JS snippets
-        </h2>
+        <h2 className="text snippet-header">Next JS snippets</h2>
         <CodeBox
           code={`
           
@@ -64,9 +62,6 @@ const SnippetsMain = () => {
         @media screen and (max-width: 650px) {
           .code-box {
             width: 100%;
-          }
-          .text2 {
-            margin-bottom: 1.5rem;
           }
         }
       `}</style>
