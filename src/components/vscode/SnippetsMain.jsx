@@ -6,10 +6,19 @@ const SnippetsMain = () => {
     <>
       <div className="content-container">
         <h1 className="header">VS-Code Snippets</h1>
-        <p>Make your own snippets in VS-code.</p>
-        <p>{`Go to: Code -\> Preferences -\> User Snippets`}</p>
-        <p>Choose programmingformat, for instance JSON</p>
-        <h2 className="snippet-header">Next JS snippets</h2>
+        <p className="text">Make your own snippets in VS-code.</p>
+        <p className="text">{`Go to: Code -\> Preferences -\> User Snippets`}</p>
+        <p className="text">Choose New Global Snippets File</p>
+
+        <br />
+        <p className="text mb">Get filename as componentname: </p>
+
+        <div className="install-box">
+          <p>{`\${TM_FILENAME_BASE/[\\\\.]//}`}</p>
+        </div>
+        <h2 className="text" className="snippet-header">
+          Next JS snippets
+        </h2>
         <CodeBox
           code={`
           
@@ -55,6 +64,9 @@ const SnippetsMain = () => {
         @media screen and (max-width: 650px) {
           .code-box {
             width: 100%;
+          }
+          .text2 {
+            margin-bottom: 1.5rem;
           }
         }
       `}</style>

@@ -16,6 +16,7 @@ const SideMenu = () => {
   const [activateFooter, setActivateFooter] = useState();
   const [activateSidebar, setActivateSidebar] = useState();
   const [activatePagelayoutSidebar, setActivatePagelayoutSidebar] = useState();
+  const [activateCss, setActivateCss] = useState();
   const router = useRouter();
   const isMobile = useMediaQuery({ query: `(max-width: 1000px)` });
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -62,6 +63,8 @@ const SideMenu = () => {
       setActivateSidebar("tab-active");
     } else if (router.pathname === "/layout/pagelayoutsidebar") {
       setActivatePagelayoutSidebar("tab-active");
+    } else if (router.pathname === "/globalclasses/css") {
+      setActivateCss("tab-active");
     }
   }, []);
   return (
@@ -116,6 +119,10 @@ const SideMenu = () => {
         <h4 className="section-header">Animations</h4>
         <Link href="/animation/animate">
           <p className={`section-tab ${activateAnimate}`}>CSS-Animate</p>
+        </Link>
+        <h4 className="section-header">Global Classes</h4>
+        <Link href="/globalclasses/css">
+          <p className={`section-tab ${activateCss}`}>CSS</p>
         </Link>
         <h4 className="section-header">VS-Code</h4>
         <Link href="/vscode/snippets">
